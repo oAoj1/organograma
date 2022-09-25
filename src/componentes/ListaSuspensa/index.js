@@ -5,9 +5,21 @@ const ListaSuspensa = (props) => {
 
   return (
         <div className="lista-suspensa">
-            <label>{label_mod}</label>
-            <select>
-                {props.item.map(item => <option key={item}>{item}</option>)}
+            <label>
+              {label_mod}
+            </label>
+
+            <select 
+            onChange={evento => props.Alterar(evento.target.value)}
+            required={props.required} 
+            value={props.valor}>
+
+                {
+                  props.item.map(item =>
+                   <option 
+                    key={item}>{item}
+                   </option>)
+                }
             </select>
         </div>
   );

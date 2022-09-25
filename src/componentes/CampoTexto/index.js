@@ -1,15 +1,13 @@
 import './CampoTexto.css'
 
 const CampoTexto = (props) => {
-
     const placeholder_mod = `${props.placeholder}`
     const label_mod = `${props.label}`
-
-    let valor = ''
+    const valor_mod = `${props.valor}`
+    const obrigatorio = `${props.obrigatorio}`
 
     const Digitando = (evento) =>{
-        valor = evento.target.value
-        console.log(valor);
+        props.Alterar(evento.target.value)
     }
 
     return(
@@ -17,7 +15,13 @@ const CampoTexto = (props) => {
             <label>
                 {label_mod}
             </label>
-            <input value={valor} onChange={Digitando} required={props.obrigatorio} placeholder={placeholder_mod} />
+
+            <input 
+                value={valor_mod} 
+                onChange={Digitando}
+                required={obrigatorio} 
+                placeholder={placeholder_mod}
+            />
         </div>
     )
 }
