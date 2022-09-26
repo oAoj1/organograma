@@ -14,7 +14,7 @@ const Formulario = (props) => {
       'Mobile',
       'Inovação e Gestão'
     ]
-
+ 
     const [nome,setNome] = useState('')
     const [cargo,setCargo] = useState('')
     const [imagem,setImagem] = useState('')

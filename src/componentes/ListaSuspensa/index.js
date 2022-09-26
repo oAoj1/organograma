@@ -3,6 +3,9 @@ import "./ListaSuspensa.css";
 const ListaSuspensa = (props) => {
   const label_mod = `${props.label}`;
 
+  const obrigatorio = `${props.required}`
+  const valor = `${props.valor}`
+
   return (
         <div className="lista-suspensa">
             <label>
@@ -10,17 +13,19 @@ const ListaSuspensa = (props) => {
             </label>
 
             <select 
-            onChange={evento => props.Alterar(evento.target.value)}
-            required={props.required} 
-            value={props.valor}>
-
+              onChange={evento => props.Alterar(evento.target.value)}
+              required={obrigatorio} 
+              value={valor}>
                 {
-                  props.item.map(item =>
-                   <option 
-                    key={item}>{item}
-                   </option>)
+                  props.item.map(
+                    item =>
+                    <option key={item}>
+                      {item}
+                    </option>
+                  )
                 }
             </select>
+
         </div>
   );
 };
