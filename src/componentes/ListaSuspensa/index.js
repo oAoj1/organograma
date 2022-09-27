@@ -17,7 +17,7 @@ const ListaSuspensa = (props) => {
               required={obrigatorio} 
               value={valor}>
                 {
-                  props.item.map(
+                  props.alternativas.map(
                     item =>
                     <option key={item}>
                       {item}
