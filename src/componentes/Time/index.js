@@ -2,14 +2,9 @@ import './Time.css'
 
 const Time = (props) =>{
     return(
-        <section style={
-            {backgroundColor:props.secundaria}
-        }
-        className='time-content'>
+        <section className='time-content' style={{backgroundColor:props.secundaria}}>
 
-            <h3 style={
-                {borderColor:props.primaria}
-            }>
+            <h3 style={{borderColor:props.primaria}}>
                 {props.nome}
             </h3>
         </section>
