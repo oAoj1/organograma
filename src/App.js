@@ -68,19 +68,19 @@ function App() {
 
       {
         times.map(
-            time => 
-              <Time key={time.nome}
-                nome={time.nome}
-                primaria={time.cor1}
-                secundaria={time.cor2}
-                colaboradores={
-                  colaboradores.filter(
+          time => 
+            <Time key={time.nome}
+              nome={time.nome}
+              primaria={time.cor1}
+              secundaria={time.cor2}
+              colaboradores={
+                colaboradores.filter(
                   colaborador => 
                     colaborador.time === time.nome
-                  )
-                }
-              />
-          )
+                )
+              }
+            />
+        )
       }
 
     </div>
