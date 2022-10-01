@@ -5,6 +5,13 @@ import Time from './componentes/Time';
 
 function App() {
 
+  const [colaboradores,setColaboradores] = useState([])
+
+  const ColaboradorAdicionado = (colaborador) =>{
+    console.log(colaborador);
+    setColaboradores([colaboradores,colaborador])
+  }
+
   const times = [
     {
       nome:'Programação',
@@ -42,13 +49,6 @@ function App() {
       cor2:'#FFEEDF',
     },
   ]
-
-  const [colaboradores,setColaboradores] = useState([])
-
-  const ColaboradorAdicionado = (colaborador) =>{
-    console.log(colaborador);
-    setColaboradores([colaboradores,colaborador])
-  }
 
   return (
     <div className="App">
