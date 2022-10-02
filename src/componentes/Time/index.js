@@ -3,10 +3,10 @@ import './Time.css'
 
 const Time = (props) =>{
     return(
+        (props.colaboradores.length > 0) ? 
         <section className='time-content' style={{backgroundColor:props.secundaria}}>
-
             <h3 style={{borderColor:props.primaria}}>{props.nome}</h3>
-
+            
             <div className='colaboradores'>
                 {
                     props.colaboradores.map(
@@ -19,8 +19,8 @@ const Time = (props) =>{
                     )
                 }
             </div>
-
         </section>
+        : ''
     )
 }
 
