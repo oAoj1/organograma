@@ -1,21 +1,16 @@
 import "./ListaSuspensa.css";
 
 const ListaSuspensa = (props) => {
-  const label_mod = `${props.label}`;
-
-  const obrigatorio = `${props.required}`
-  const valor = `${props.valor}`
-
   return (
         <div className="lista-suspensa">
             <label>
-              {label_mod}
+              {props.label}
             </label>
 
             <select 
               onChange={evento => props.Alterar(evento.target.value)}
-              required={obrigatorio} 
-              value={valor}>
+              required={props.required} 
+              value={props.valor}>
                 {
                   props.alternativas.map(
                     item =>
