@@ -24,6 +24,7 @@ const ListaSuspensa = (props) => {
                     </option>
                   )
                 }
+                <option value=""></option>
             </select>
 
         </div>
