@@ -10,7 +10,9 @@ function App() {
 
   const ColaboradorAdicionado = (colaborador) =>{
     debugger
-    setColaboradores([...colaboradores,colaborador])
+    setColaboradores([
+      ...colaboradores,colaborador
+    ])
   }
 
   const times = [
@@ -55,7 +57,6 @@ function App() {
     <div className="App">
       <Banner/>
       <Formulario 
-
         times={
           times.map(
             time => time.nome
@@ -65,7 +66,6 @@ function App() {
         ColaboradorCadastrado={
           colaborador => ColaboradorAdicionado(colaborador)
         }
-
       />
 
       {
