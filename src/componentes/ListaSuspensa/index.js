@@ -11,14 +11,11 @@ const ListaSuspensa = (props) => {
               onChange={evento => props.Alterar(evento.target.value)}
               required={props.required} 
               value={props.valor}>
-                {
-                  props.alternativas.map(
-                    item =>
+                {props.alternativas.map(item =>
                     <option key={item}>
                       {item}
                     </option>
-                  )
-                }
+                )}
                 <option value=""></option>
             </select>
 
