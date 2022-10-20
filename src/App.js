@@ -68,9 +68,7 @@ function App() {
         }
       />
 
-      {
-        times.map(
-          time => 
+      {times.map(time => 
             <Time key={time.nome}
               nome={time.nome}
               primaria={time.cor1}
@@ -79,11 +77,9 @@ function App() {
                 colaboradores.filter(
                   colaborador => 
                     colaborador.time === time.nome
-                )
-              }
+              )}
             />
-        )
-      }
+      )}
 
       <Rodape></Rodape>
 
